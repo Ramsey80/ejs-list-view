@@ -24,6 +24,11 @@ app.get('/about',(req,res)=>{
     let title = "About Page";
     res.render('pages/about',{'title': title});
 });
+// Users URL
+app.get('/users',(req,res)=>{
+    let title = "Users Page";
+    res.render('users/index',{'title': title});
+});
 
 //Set server to listen for requests
 app.listen(port, () => {
