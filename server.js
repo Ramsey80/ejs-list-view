@@ -11,7 +11,7 @@ const app = express();
 app.set('view engine','ejs');
 
 //this will allow us to serve up static files, CSS, images & JS
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 //reference test.json of users
 var data = require('./test.json');
@@ -26,6 +26,16 @@ app.get('/',(req,res)=>{
 app.get('/about',(req,res)=>{
     let title = "About Page";
     res.render('pages/about',{'title': title});
+});
+//books url
+app.get('/books',(req,res)=>{
+    let title = "Books Page";
+    res.render('pages/books',{'title': title});
+});
+//hobbies url
+app.get('/hobbies',(req,res)=>{
+    let title = "Hobbies Page";
+    res.render('pages/hobbies',{'title': title});
 });
 // Users URL
 app.get('/users',(req,res)=>{
