@@ -10,21 +10,14 @@
             </tr>
         </thead>
         <tbody>
+            <% users.forEach(function(user){ %>
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>johnd@example.com</td>
+                <td><a href="users/view/<%= user.id %>"><%= user.first_name %></a></td>
+                <td><%= user.last_name %></td>
+                <td><%= user.email %></td>
             </tr>
-            <tr>
-                <td>Jane</td>
-                <td>Doe</td>
-                <td>janed@example.com</td>
-            </tr>
-            <tr>
-                <td>Judy</td>
-                <td>Doe</td>
-                <td>judyd@example.com</td>
-            </tr>
+            <% }); %>
+
         </tbody>
     </table>
 </div>

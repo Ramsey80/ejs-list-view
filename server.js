@@ -30,7 +30,10 @@ app.get('/about',(req,res)=>{
 // Users URL
 app.get('/users',(req,res)=>{
     let title = "Users Page";
-    res.render('users/index',{'title': title});
+    res.render('users/index',{
+      'title': title,
+      'users': data,
+    });
 });
 
 //Set server to listen for requests
