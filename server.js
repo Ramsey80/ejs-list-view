@@ -13,6 +13,9 @@ app.set('view engine','ejs');
 //this will allow us to serve up static files, CSS, images & JS
 app.use(express.static('public'));
 
+//reference test.json of users
+var data = require(./test.json);
+
 //index/home URL
 app.get('/',(req,res)=>{
     let title = "Home Page";
