@@ -36,6 +36,16 @@ app.get('/users',(req,res)=>{
     });
 });
 
+app.get('/users/view/:id', function(req, res) {
+ var title = 'User Page';
+ var id = req.params.id;
+ res.render('users/view', {
+     title: title,
+     user: data[--id]
+ });
+});
+
+
 //Set server to listen for requests
 app.listen(port, () => {
   console.log(`Server running at port: ${port}`);
