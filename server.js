@@ -14,7 +14,7 @@ app.set('view engine','ejs');
 app.use(express.static('public'));
 
 //reference test.json of users
-var data = require(./test.json);
+var data = require('./test.json');
 
 //index/home URL
 app.get('/',(req,res)=>{
@@ -36,5 +36,6 @@ app.get('/users',(req,res)=>{
 //Set server to listen for requests
 app.listen(port, () => {
   console.log(`Server running at port: ${port}`);
+  console.log(data);
 });
 
