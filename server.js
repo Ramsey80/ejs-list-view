@@ -1,6 +1,12 @@
 //include Express
 const express = require('express');
 
+//
+require('dotenv').config;
+
+//manages database connection
+require('./models/mongoose');
+
 //server will listen on this port
 const port = 3000;
 
