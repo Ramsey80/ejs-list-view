@@ -2,7 +2,7 @@
 const express = require('express');
 
 //
-require('dotenv').config;
+require('dotenv').config();
 
 //manages database connection
 require('./models/mongoose');
@@ -17,7 +17,7 @@ const app = express();
 app.set('view engine','ejs');
 
 //this will allow us to serve up static files, CSS, images & JS
-app.use(express.static(__dirname));
+app.use(express.static("public"));
 
 //reference test.json of users
 var data = require('./test.json');
